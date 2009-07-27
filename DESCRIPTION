@@ -1,8 +1,8 @@
 Package: rgrs
 Type: Package
 Title: Functions to make R usage in social sciences easier (in french)
-Version: 0.2-11
-Date: 2009-06-29
+Version: 0.2-13
+Date: 2009-07-27
 Author: Julien Barnier <julien.barnier@ens-lsh.fr>
 Maintainer: Julien Barnier <julien.barnier@ens-lsh.fr>
 Description: This package provides functions for beginners and social
@@ -18,6 +18,6 @@ SystemRequirements: xclip (Linux)
 URL: http://alea.fr.eu.org/j/rgrs.html
 Repository: CRAN
 Repository/R-Forge/Project: rgrs
-Repository/R-Forge/Revision: 47
-Date/Publication: 2009-07-01 13:53:16
-Packaged: 2009-06-30 20:58:20 UTC; rforge
+Repository/R-Forge/Revision: 50
+Date/Publication: 2009-08-13 08:59:31
+Packaged: 2009-08-10 20:19:04 UTC; rforge
