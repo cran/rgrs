@@ -1,9 +1,13 @@
 `carte.prop` <-
-function (sp, data, varname, sp.key="id", data.key="id", diverg=FALSE, diverg.zero = 0, nbcuts=6, at=NULL, at.lim=FALSE, main="", sub=NULL, posleg="topleft", palette.pos="Reds", palette.neg="Blues", palette=NULL, ...) {
-  tmp <- data[,c(data.key, varname)]
+function (sp, data, varname, sp.key="id", data.key="id", diverg=FALSE, diverg.zero = 0, nbcuts=6, at=NULL, at.lim=FALSE, main="", sub=NULL, posleg="topleft", palette.pos="Reds", palette.neg="Blues", palette=NULL, leg.options=NULL, ...) {
   require(sp)
   require(RColorBrewer)
+  tmp <- data[,c(data.key, varname)]
+  ## Creation d'une variable temporaire pour recuperer l'ordre initial apres le merge
+  ## (Joel Gombin)
+  sp@data$rgrs.temp.sort.var <- 1:nrow(sp@data)
   sp@data <- merge(sp@data, tmp, by.x=sp.key, by.y=data.key, all.x=TRUE, all.y=FALSE, sort=FALSE)
+  sp@data <- sp@data[order(sp@data$rgrs.temp.sort.var, na.last = TRUE),]
   tmp.var <- na.omit(sp@data[,varname])
   if (is.null(at)) at <- pretty(tmp.var,n=nbcuts)
   if (!is.null(at) && at.lim) {
@@ -40,6 +44,9 @@ function (sp, data, varname, sp.key="id", data.key="id", diverg=FALSE, diverg.ze
   }    
   title(main,sub,line=1)
   box()
-  if (posleg != "none" && !is.null(posleg))  
-    carte.prop.legende(posleg=posleg, at, palette, na.leg=na.leg)
+  if (posleg != "none" && !is.null(posleg)) {
+    leg.default.options <- list(at, palette, posleg=posleg, na.leg=na.leg)
+    leg.args <- c(leg.default.options, leg.options)
+    do.call(carte.prop.legende, leg.args) 
+  }
 }

@@ -1,9 +1,13 @@
 `carte.qual` <-
-function (sp, data, varname, sp.key="id", data.key="id", main="", sub=NULL, posleg="topleft", palette.qual="Set3", palette=NULL, ...) {
+function (sp, data, varname, sp.key="id", data.key="id", main="", sub=NULL, posleg="topleft", palette.qual="Set3", palette=NULL, leg.options=NULL, ...) {
   require(sp)
   require(RColorBrewer)
   tmp <- data[,c(data.key, varname)]
+  ## Creation d'une variable temporaire pour recuperer l'ordre initial apres le merge
+  ## (Joel Gombin)
+  sp@data$rgrs.temp.sort.var <- 1:nrow(sp@data)
   sp@data <- merge(sp@data, tmp, by.x=sp.key, by.y=data.key, all.x=TRUE, all.y=FALSE, sort=FALSE)
+  sp@data <- sp@data[order(sp@data$rgrs.temp.sort.var, na.last = TRUE),]
   tmp.var <- na.omit(sp@data[,varname])
   qual.names <- sort(unique(data[,varname]))
   qual.nb <- length(qual.names)
@@ -19,6 +23,10 @@ function (sp, data, varname, sp.key="id", data.key="id", main="", sub=NULL, posl
   }
   title(main,sub,line=1)
   box()
-  if (posleg != "none" && !is.null(posleg))
-    carte.qual.legende(posleg=posleg, qual.names, palette, na.leg=na.leg)
+  if (posleg != "none" && !is.null(posleg)) {
+    leg.default.options <- list(qual.names, palette, posleg=posleg, na.leg=na.leg)
+    leg.args <- c(leg.default.options, leg.options)
+    do.call(carte.qual.legende, leg.args) 
+  }
+
 }
