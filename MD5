@@ -1,4 +1,5 @@
-1cab75daa64d0d78094012d630ec5158 *DESCRIPTION
+151b26c580deee924efc57b2dd430086 *DESCRIPTION
+9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
 2a950e521382308c13c343365779eb42 *R/carte.eff.R
 c4dad76b1a3cdf70c2b40575ddc29d94 *R/carte.eff.legende.R
 b814cf536985fa42e49cd0b3f1cffd9d *R/carte.labels.R
@@ -25,14 +26,12 @@ bc1daff9d18c71ecd6a6152095fed349 *R/prop.R
 5610ae1cc008844fd6eb914899f98108 *R/quant.cut.R
 299e79a1803830caf194246461a95e9e *R/renomme.variable.R
 5f36023613ba40cd96bea589a0b8e5f2 *R/residus.R
-962c62bbe55df55573291beec02f3620 *R/rgrs.update.R
 d8dc3bf4365aa0815a01e6448aba2f44 *R/selectwd.R
 a0bf5eb88dcdaf3996cd157ac9da6137 *R/theff.R
 1455ab5f6f9173b4d4a00e2fc2ae5428 *R/thprop.R
 fe12013e67d668be2f49d2c759af1454 *R/wtd.mean.R
 33e98d3060f426e0eff632286c123f63 *R/wtd.table.R
 a4469a2f491928e7280fc48e67318997 *R/wtd.var.R
-28d96bc9bd16e737cad24dfedcb84f55 *README.org
 ca4ae65a3f7b63afbb2ef9e45a671889 *data/hdv2003.rda
 ea42617676fc42123b326823565ff5af *data/lyon.rda
 e3152f2024cdc1069f12a0a2aa6e14cd *data/rp99.rda
@@ -54,7 +53,5 @@ e2a9b1004dacaf35d381c688400b75b2 *man/mls.import.Rd
 d5cfe3002293dddd1d91a43c1d8840ee *man/print.proptab.Rd
 443658fbc0669572702cd8507a92d9bb *man/quant.cut.Rd
 83125c4d6421545016658a7cfd9770e6 *man/renomme.variable.Rd
-69b0b8a90f0b47e86bb58f410ff4ed77 *man/rgrs.update.Rd
 68b5d588e1051865c3c1c30b0bc78fe4 *man/rp99.Rd
 a03fd192b6fdde846f6fc919a2a03416 *man/selectwd.Rd
-9a36bbe4a6aab49ce02e3aa4d81152d4 *rgrs-Ex.R
