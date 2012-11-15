@@ -1,4 +1,4 @@
-151b26c580deee924efc57b2dd430086 *DESCRIPTION
+45401d14a27665dd881d643a4080e348 *DESCRIPTION
 9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
 2a950e521382308c13c343365779eb42 *R/carte.eff.R
 c4dad76b1a3cdf70c2b40575ddc29d94 *R/carte.eff.legende.R
@@ -8,7 +8,7 @@ a2b90894069b0886e5ca607558b9184a *R/carte.prop.legende.R
 9d6ceab55fb43bb56383d2eb7907fbb8 *R/carte.qual.R
 9ac1b64d5849100ea3c7c7cf5de0b784 *R/carte.qual.legende.R
 534a2a93d9d6c084ace87c7dca09d48c *R/copie.R
-93419dc092cfca7557791a58eeb3c2af *R/copie.default.R
+aa4bfc2736a6e5426256368bd56f5e7c *R/copie.default.R
 f116202e41b3cff3ffd8c811003a45e1 *R/copie.proptab.R
 1e6a154ebae18e3274dd2405edee96e2 *R/cprop.R
 7ee8082e6452105ba2124b9411d7be43 *R/cramer.v.R
@@ -39,7 +39,7 @@ ad248f9ad3b3b982499e8cc269b4a4c0 *man/Cartographie.Rd
 986d2e8b280ba58777ca5e31bbbe7d94 *man/Cartographie.legende.Rd
 878d1799a102e3bf2fc9dcb89e1d8bf6 *man/Ponderations.Rd
 4228bec00e7afe652e9875deeb82407c *man/Profils.Rd
-50af122736962aa286823a710684ee03 *man/copie.Rd
+4e2dba700026426d21fe7853ab7866cc *man/copie.Rd
 e5d1b7a6dfd3b0ed2eab4543094f5699 *man/copie.proptab.Rd
 d60fda3617e4864c41a378bf5004a23c *man/cramer.v.Rd
 4cf24b11106bc2bc0ad25c7db73adfdd *man/format.proptab.Rd
@@ -55,3 +55,4 @@ d5cfe3002293dddd1d91a43c1d8840ee *man/print.proptab.Rd
 83125c4d6421545016658a7cfd9770e6 *man/renomme.variable.Rd
 68b5d588e1051865c3c1c30b0bc78fe4 *man/rp99.Rd
 a03fd192b6fdde846f6fc919a2a03416 *man/selectwd.Rd
+9a36bbe4a6aab49ce02e3aa4d81152d4 *rgrs-Ex.R
